@@ -4,145 +4,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RecycleRight Qatar | The Future is Green</title>
+<title>RecycleRight Qatar | Sustainability Leader</title>
 
 <style>
-body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:#0f2027;
-background:linear-gradient(to right,#203a43,#2c5364);
-color:white;
-scroll-behavior:smooth;
-}
-
-nav{
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-padding:18px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav button{
-background:none;
-border:none;
-color:white;
-margin:0 18px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-nav button:hover{
-color:#00ffcc;
-transform:scale(1.1);
-}
-
-.hero{
-text-align:center;
-padding:100px 20px;
-}
-
-.hero h1{
-font-size:50px;
-background:linear-gradient(45deg,#00ffcc,#00cc66);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.hero p{
-font-size:20px;
-opacity:0.8;
-}
-
-.section{
-display:none;
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
-animation:fadeIn 0.6s ease-in-out;
-}
-
-.active{
-display:block;
-}
-
-.card{
-background:rgba(255,255,255,0.08);
-border-radius:15px;
-padding:30px;
-margin-bottom:40px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
-}
-
-.card img{
-width:100%;
-max-height:230px;
-object-fit:cover;
-border-radius:12px;
-margin-bottom:20px;
-}
-
-.card h2{
-color:#00ffcc;
-margin-bottom:15px;
-}
-
-.card ul{
-margin-left:20px;
-line-height:1.8;
-}
-
-.stats{
-display:flex;
-justify-content:space-around;
-text-align:center;
-margin-top:30px;
-}
-
-.stat{
-font-size:28px;
-font-weight:bold;
-color:#00ffcc;
-}
-
-.btn{
-background:#00ffcc;
-color:black;
-padding:14px 22px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#00cc66;
-transform:scale(1.05);
-}
-
-footer{
-background:black;
-text-align:center;
-padding:25px;
-font-size:14px;
-margin-top:40px;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#111;color:#eee;}
+nav{background:#000;padding:18px;text-align:center;}
+nav button{background:none;border:none;color:white;margin:0 18px;font-size:15px;cursor:pointer;}
+nav button:hover{color:#00ffcc;}
+.hero{background:linear-gradient(135deg,#00ffcc,#00cc66);color:#000;text-align:center;padding:90px 20px;}
+.hero h1{font-size:52px;margin-bottom:10px;}
+.section{display:none;max-width:1100px;margin:auto;padding:70px 20px;}
+.active{display:block;}
+.card{background:#1c1c1c;border-radius:14px;padding:35px;margin-bottom:40px;box-shadow:0 12px 30px rgba(0,0,0,0.6);}
+.card img{width:100%;max-height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;}
+.card h2{color:#00ffcc;margin-bottom:15px;font-size:28px;}
+.card p{line-height:1.7;margin-bottom:15px;}
+.card ul{margin-left:20px;line-height:1.8;}
+.statbox{display:flex;justify-content:space-around;flex-wrap:wrap;margin-top:25px;}
+.stat{margin:15px;text-align:center;}
+.stat h3{color:#00ffcc;font-size:30px;margin:5px 0;}
+.btn{background:#00ffcc;color:#000;padding:14px 24px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;}
+.btn:hover{background:#00cc66;}
+footer{background:#000;text-align:center;padding:25px;font-size:14px;}
 </style>
 
 <script>
@@ -150,13 +33,11 @@ function showSection(id){
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
-
 function takePledge(){
-document.getElementById("pledgeMessage").innerText=
-"🔥 YOU JUST JOINED THE GREEN REVOLUTION. Qatar is cleaner because of you.";
+document.getElementById("pledgeMessage").innerText =
+"🌍 You are officially part of Qatar’s Sustainability Revolution!";
 }
 </script>
-
 </head>
 
 <body onload="showSection('home')">
@@ -166,37 +47,26 @@ document.getElementById("pledgeMessage").innerText=
 <button onclick="showSection('recycle')">Recyclables</button>
 <button onclick="showSection('process')">Process</button>
 <button onclick="showSection('impact')">Impact</button>
+<button onclick="showSection('education')">Education</button>
 <button onclick="showSection('pledge')">Pledge</button>
 </nav>
 
 <div class="hero">
 <h1>RecycleRight Qatar ♻</h1>
-<p>The Most Powerful Student Sustainability Project</p>
+<p>Empowering Communities Through Sustainability Education</p>
 </div>
 
 <section id="home" class="section">
 <div class="card">
 <img src="qatar.png">
-<h2>Why Recycling Matters in Qatar</h2>
-<p>
-Qatar's rapid development has increased waste production dramatically.
-Without strong recycling systems, landfills expand and pollution increases.
-Recycling reduces environmental damage, conserves resources,
-and supports Qatar National Vision 2030.
-</p>
-<div class="stats">
-<div>
-<div class="stat">95%</div>
-<p>Energy Saved Recycling Aluminum</p>
-</div>
-<div>
-<div class="stat">1000s</div>
-<p>Tons of Waste Produced Daily</p>
-</div>
-<div>
-<div class="stat">2030</div>
-<p>Sustainability Vision Goal</p>
-</div>
+<h2>Recycling in Qatar</h2>
+<p>Qatar generates thousands of tons of waste daily due to rapid economic and urban development. Without effective recycling systems, waste contributes to landfill expansion, pollution, and climate change.</p>
+<p>This project supports Qatar National Vision 2030 by promoting environmental responsibility and sustainable living practices among students and families.</p>
+<p>By educating young generations, we create long-term behavioral change that protects our environment and conserves natural resources.</p>
+<div class="statbox">
+<div class="stat"><h3>95%</h3><p>Energy saved recycling aluminum</p></div>
+<div class="stat"><h3>2030</h3><p>Sustainability development target</p></div>
+<div class="stat"><h3>∞</h3><p>Glass recyclable endlessly</p></div>
 </div>
 </div>
 </section>
@@ -205,65 +75,64 @@ and supports Qatar National Vision 2030.
 <div class="card">
 <img src="station.png">
 <h2>What Can Be Recycled?</h2>
+<p>Understanding recyclable materials is essential to reducing contamination and increasing efficiency.</p>
 <ul>
-<li><strong>Plastic</strong> – Clean bottles and containers.</li>
-<li><strong>Paper & Cardboard</strong> – Books, newspapers, packaging.</li>
-<li><strong>Metal</strong> – Aluminum cans save massive energy.</li>
-<li><strong>Glass</strong> – Reusable and endlessly recyclable.</li>
+<li><strong>Plastic:</strong> Bottles, containers, packaging (clean and dry).</li>
+<li><strong>Paper & Cardboard:</strong> Newspapers, magazines, boxes.</li>
+<li><strong>Metal:</strong> Aluminum cans save up to 95% energy.</li>
+<li><strong>Glass:</strong> Bottles and jars can be recycled repeatedly.</li>
 </ul>
-<p>
-Correct sorting increases recycling efficiency and prevents contamination.
-</p>
+<p>Correct sorting ensures materials can be processed effectively and transformed into new products.</p>
 </div>
 </section>
 
 <section id="process" class="section">
 <div class="card">
 <img src="process.png">
-<h2>How the Recycling System Works</h2>
-<p>
-Waste is separated, collected, sorted, processed into raw materials,
-and manufactured into new products in a circular economy system.
-</p>
+<h2>The Recycling Process</h2>
+<p>Recycling operates in a circular economy model, reducing reliance on raw material extraction.</p>
 <ul>
-<li>Collection</li>
-<li>Sorting</li>
-<li>Cleaning</li>
-<li>Processing</li>
-<li>Manufacturing</li>
+<li>Collection from homes and businesses</li>
+<li>Sorting into material categories</li>
+<li>Cleaning and processing</li>
+<li>Manufacturing into new goods</li>
+<li>Distribution back to consumers</li>
 </ul>
+<p>This system reduces landfill dependency and lowers greenhouse gas emissions.</p>
 </div>
 </section>
 
 <section id="impact" class="section">
 <div class="card">
 <img src="impact.png">
-<h2>The Environmental Impact</h2>
-<p>
-Recycling reduces methane emissions, protects marine ecosystems,
-and increases green spaces across Qatar.
-</p>
-<p>
-It lowers carbon footprint and conserves natural resources.
-</p>
+<h2>Environmental Impact</h2>
+<p>Recycling reduces methane emissions from landfills and lowers carbon footprints across industries.</p>
+<p>It protects marine ecosystems in the Arabian Gulf and conserves forests, oil reserves, and minerals.</p>
+<p>Sustainable waste management contributes to cleaner cities and healthier communities.</p>
+</div>
+</section>
+
+<section id="education" class="section">
+<div class="card">
+<h2>Why Education Matters</h2>
+<p>Education is the foundation of sustainable change. Teaching students about recycling creates responsible future leaders.</p>
+<p>Digital platforms like this website help spread awareness efficiently and encourage participation.</p>
+<p>Through communication and research skills, this project demonstrates how technology can support environmental goals.</p>
 </div>
 </section>
 
 <section id="pledge" class="section">
 <div class="card">
 <img src="pledge.png">
-<h2>Take the Pledge</h2>
-<p>
-Commit to recycling in every room of your home and encouraging others
-to build sustainable habits.
-</p>
-<button class="btn" onclick="takePledge()">Join The Green Revolution</button>
+<h2>Take the Sustainability Pledge</h2>
+<p>I commit to recycling responsibly, reducing waste, and encouraging others to adopt sustainable habits.</p>
+<button class="btn" onclick="takePledge()">Join the Movement</button>
 <p id="pledgeMessage" style="margin-top:20px;font-weight:bold;"></p>
 </div>
 </section>
 
 <footer>
-© 2026 RecycleRight Qatar | MYP Personal Project | Built Different.
+© 2026 RecycleRight Qatar | MYP Personal Project | Sustainability Leadership
 </footer>
 
 </body>
